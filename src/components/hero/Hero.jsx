@@ -38,6 +38,20 @@ const sliderVariants = {
 };
 
 const Hero = () => {
+  const hireMe = () => {
+    window.open('https://www.upwork.com/freelancers/~0140b941ccaa0e490d', '_blank');
+  };
+
+  const mailMe = () => {
+    window.location.href = 'mailto:businesswithsatyam9555@gmail.com';
+  };
+
+  // Define your inline styles here
+  const buttonContainerStyle = {
+    position: 'relative',
+    zIndex: 5, // Adjust this value as needed
+  };
+
   return (
     <div className="hero">
       <div className="wrapper">
@@ -48,14 +62,14 @@ const Hero = () => {
           animate="animate"
         >
           <motion.h2 variants={textVariants}>SATYAM SINGH</motion.h2>
-          <motion.h1 variants={textVariants}>
-            Full Stack Developer 
-          </motion.h1>
+          <motion.h1 variants={textVariants}>Full Stack Developer</motion.h1>
           <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants}>
-              See the Latest Works
+            <motion.button variants={textVariants} onClick={hireMe} style={buttonContainerStyle}>
+              Hire Me
             </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+            <motion.button variants={textVariants} onClick={mailMe} style={buttonContainerStyle}>
+              Mail Me
+            </motion.button>
           </motion.div>
           <motion.img
             variants={textVariants}
@@ -71,7 +85,7 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        Writer Content Creator Influencer
+        Developer Writer Student Gamer
       </motion.div>
       <div className="imageContainer">
         <img src="/hero2.png" alt="" />
